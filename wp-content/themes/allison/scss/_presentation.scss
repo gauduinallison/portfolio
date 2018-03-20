@@ -1,0 +1,97 @@
+#about{
+  padding-bottom: 100px;
+  padding-top: 100px;
+  position: relative;
+  h2{
+    font-size: 45px;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 3px;
+    position: absolute;
+    top: -30px;
+    &:before{
+      content: "";
+      display: block;
+      height: 3px;
+      width: 295px;
+      background: $primary-color;
+      position: absolute;
+      top: 31px;
+      right: 293px;
+    }
+  }
+  .text{
+    padding-top: 50px;
+    p{
+      line-height: 30px;
+      padding-right: 70px;
+    }
+    .btn{
+      display: inherit;
+      a{
+        font-weight: 700;
+        font-size: 24px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        color: $primary-color;
+        &:after{
+          content: "";
+          display: block;
+          background: $secondary-color;
+          height: 4px;
+          width: 255px;
+          margin: 0 auto;
+        }
+        &:hover{
+          &:after{
+            width: 0px;
+            transition: 0.5s all ease;
+          }
+        }
+      }
+    }
+  }
+  .img{
+    position: relative;
+    &:after{
+      content: "";
+      display: block;
+      height: 107px;
+      width: 107px;
+      background: $secondary-color;
+      position: absolute;
+      top: 252px;
+      left: -53px;
+    }
+  }
+}
+
+@media screen and (max-width: 640px){
+  #about{
+    text-align: center!important;
+    margin: 0 auto;
+    padding-top: 0px;
+    h2{
+      position: inherit;
+      padding-bottom: 50px;
+      &:before{
+        display: none;
+      }
+    }
+    p{
+      padding-right: 0!important;
+    }
+    .btn{
+      padding-top: 20px;
+      padding-bottom: 50px;
+      a{
+        margin: 0 auto;
+      }
+    }
+    .img{
+      &:after{
+        display: none;
+      }
+    }
+  }
+}
